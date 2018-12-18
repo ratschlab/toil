@@ -233,8 +233,8 @@ class AbstractGridEngineBatchSystem(BatchSystemLocalSupport):
                 activity |= self.killJobs()
                 activity |= self.createJobs(newJob)
                 activity |= self.checkOnJobs()
-                if not activity:
-                    logger.debug('No activity, sleeping for %is', self.boss.sleepSeconds())
+                #if not activity:
+                #    logger.debug('No activity, sleeping for %is', self.boss.sleepSeconds())
 
         @abstractmethod
         def prepareSubmission(self, cpu, memory, jobID, command):
